@@ -1,0 +1,40 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  width: 100%;
+}
+h1{
+  color: black;
+  align-items: center;
+  justify-content: center;
+  margin-top: 90px;
+  margin-left: 390px;
+  font-size: 30px;
+}
+input{
+  background-color: white;
+  border-color: black;
+  margin-left: 390px;
+  border-radius: 5px;
+  color: black;
+  width: 200px;
+  height: 20px;
+}
+.btn-search{
+  background-color: white;
+  border-color: black;
+  margin-left: 15px;
+  color: black;
+  width: 70px;
+  font-size: 20px;
+}
+.main-content{
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  padding-top: 80px; 
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
