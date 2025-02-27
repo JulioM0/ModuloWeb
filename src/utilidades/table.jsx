@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../estilos/TableStyle.css";
+import Formulario from './formulario.jsx';
 import axios from "axios";
-import { Modal } from "@mui/material";
 
 const Table = () => {
   const [data, setData] = useState([]);
@@ -140,10 +140,11 @@ const Table = () => {
               </li>
             ))}
           </ul>
-          <button className="btn1" onClick={() => setSelectedData(null)}>Agregar Atributos</button>
+          <button className="btn1" onClick={Formulario}>Agregar Atributos</button>
           <button className="btn2" onClick={() => setSelectedIP(null)}>Cerrar</button>
         </div>
       )}
+
     </div>
   ); 
 };
