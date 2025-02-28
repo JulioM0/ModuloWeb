@@ -1,16 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
+import "../estilos/modal.css"; 
+import Table from "./table";
 
-const Formulario = () => {
-    const NuevaVentana = window.open("","_blank","width=500,height=400")
-    return (
-        NuevaVentana.document.write(
-            <html>
-                <div className="form-1">
-                    <label> INGRESA LOS DATOS</label>
-                    <input type="text" />
-                </div>
-            </html>
-        )
-    );
+const Modal = ({ isOpen, onClose }) => {
+
+if (!isOpen) return null; 
+  return (
+    
+    <div className="modal-overlay">
+      <div className="modal-contenido">
+        <h2>Agregar Atributos</h2>
+        <label>Nombre:</label>
+            <input type="text" placeholder="Ingrese el nombre" />
+        <label>Valor:</label>
+        <input type="text" placeholder="Ingrese el valor" />
+        <button onClick={onClose}>Cerrar</button>
+      </div>
+    </div>
+  );
 };
-export default Formulario; 
+
+export default Modal;

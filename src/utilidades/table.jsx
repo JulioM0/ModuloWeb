@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../estilos/TableStyle.css";
-import Formulario from './formulario.jsx';
+import Modal from './formulario.jsx';
 import axios from "axios";
 
 const Table = () => {
@@ -11,6 +11,7 @@ const Table = () => {
   const ipInicioRef = useRef(null);
   const ipFinRef = useRef(null);
   const [loading, setLoading] = useState(false);
+  const [modalAbierto, setModalAbierto] = useState(false);
 
   useEffect(() => {
     obtenerLogs();
@@ -140,7 +141,8 @@ const Table = () => {
               </li>
             ))}
           </ul>
-          <button className="btn1" onClick={Formulario}>Agregar Atributos</button>
+          <button className="btn1" onClick={() => setModalAbierto(true)}>Agregar Atributos</button>
+          <Modal isOpen={modalAbierto} onClose={() => setModalAbierto(false)} />
           <button className="btn2" onClick={() => setSelectedIP(null)}>Cerrar</button>
         </div>
       )}
