@@ -115,15 +115,17 @@ const Table = () => {
           <thead>
             <tr>
               <th>ID</th>
+              <th>Nombre Activo</th>
               <th>IP</th>
-              <th>Status</th>
+              <th>Estado</th>
             </tr>
           </thead>
           <tbody>
             {data.map((item) => (
               <tr key={item.id} onClick={() => handleRowClick(item.ip, item.datos)} style={{ cursor: "pointer" }}>
                 <td>{item.id}</td>
-                <td>{item.datos?.nombre_Del_Sistema || "desconocido"}, {item.ip}</td>
+                <td>{item.datos?.nombre_Del_Sistema || "desconocido"}</td>
+                <td>{item.ip}</td>
                 <td>{item.estatus}</td>
               </tr>
             ))}

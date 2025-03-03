@@ -1,6 +1,5 @@
 import React from "react";
 import "../estilos/modal.css"; 
-import Table from "./table";
 
 const Modal = ({ isOpen, onClose }) => {
 
