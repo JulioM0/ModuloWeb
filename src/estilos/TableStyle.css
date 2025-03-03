@@ -87,7 +87,7 @@
 .btn1 {
     margin-right: 20px;
     margin-top: 30px;
-    background: #ff4444;
+    background: linear-gradient(to right, rgb(235, 88, 88), rgb(241, 44, 44));
     color: white;
     border: none;
     padding: 5px 10px;
@@ -95,7 +95,7 @@
 }
 .btn2 {
     margin-top: 20px;
-    background: #ff4444;
+    background: linear-gradient(to right, rgb(235, 88, 88), rgb(241, 44, 44));
     color: white;
     border: none;
     padding: 5px 10px;
